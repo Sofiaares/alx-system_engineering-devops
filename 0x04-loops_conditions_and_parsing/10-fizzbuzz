@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# The fizzbuzz test multiples of 3 is fizz, of 5 buzz, of 15 fizzbuzz
+for num in {1..100}
+do
+	if (( num % 3 == 0 && num % 5 == 0 ))
+	then
+		echo "FizzBuzz"
+	elif (( num % 3 == 0 ))
+	then
+		echo "Fizz"
+	elif (( num % 5 == 0 ))
+	then
+		echo "Buzz"
+	else
+		echo $num
+	fi
+done
