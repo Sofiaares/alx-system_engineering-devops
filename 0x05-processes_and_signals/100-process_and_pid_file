@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Handles multiple signals
+
+FILE="/var/run/myscript.pid"
+
+trap 'echo Y U no love me?!' 2
+trap 'echo I hate the kill command; sudo rm -f $FILE; exit' 15
+trap 'sudo rm -f $FILE; exit' 3
+
+if [ ! -e $FILE ]
+then
+	sudo touch $FILE
+	sudo chmod 757 $FILE
+fi
+echo "$$" > $FILE
+while true
+do
+	echo "To infinity and beyond"
+	sleep 1
+done

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Stops the process created by the '7-highlander' script
+
+process="./7-highlander"
+pgrep -f $process | xargs kill -9

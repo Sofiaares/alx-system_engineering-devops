@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Terminates the process created by the '4-to_infinity_and_beyond' script
+
+process="./4-to_infinity_and_beyond"
+pgrep -f $process | xargs kill -15
