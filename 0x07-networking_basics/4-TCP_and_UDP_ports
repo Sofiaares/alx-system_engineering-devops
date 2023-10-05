@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Prints all the active sockets on the system.
+netstat -p
